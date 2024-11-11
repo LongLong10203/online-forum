@@ -1,22 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "app.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/node",
-            "config": {
-                "buildCommand": "prisma generate"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "app.py"
-        }
-    ]
+    "name": "deployment-prisma-vercel",
+    "dependencies": {
+        "@prisma/client": "4.16.2"
+    },
+    "scripts": {
+        "vercel-build": "prisma generate && prisma migrate deploy && next build",
+        "prisma:generate": "prisma generate"
+    },
+    "devDependencies": {
+        "prisma": "4.16.2"
+    }
 }
