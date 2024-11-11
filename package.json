@@ -1,5 +1,17 @@
 {
+    "name": "online-forum",
+    "version": "0.1.0",
+    "private": true,
     "scripts": {
-        "build": "prisma generate && python app.py"
+        "vercel-build": "prisma generate && npm run migrate:deploy",
+        "prisma:generate:dataproxy": "prisma generate",
+        "prisma:generate:library": "prisma generate",
+        "migrate:deploy": "prisma migrate deploy"
+    },
+    "dependencies": {
+        "@prisma/client": "3.4.2"
+    },
+    "devDependencies": {
+        "prisma": "3.4.2"
     }
 }
