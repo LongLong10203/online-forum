@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "build": "prisma generate && python app.py"
+    }
+}

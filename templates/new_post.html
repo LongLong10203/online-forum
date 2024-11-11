@@ -10,12 +10,12 @@
     <form action="{{ url_for('new_post') }}" method="POST">
         <label for="title">Title:</label>
         <br>
-        <input type="text" id="title" name="title" required>
+        <!-- title is not required -->
+        <input type="text" id="title" name="title">
         <br>
         <label for="content">Content:</label>
         <br>
-        <!-- content is not required -->
-        <textarea id="content" name="content"></textarea>
+        <textarea id="content" name="content" required></textarea>
         <br>
         <button type="submit">Create Post</button>
     </form>

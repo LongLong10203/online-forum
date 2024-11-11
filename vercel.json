@@ -4,6 +4,13 @@
         {
             "src": "app.py",
             "use": "@vercel/python"
+        },
+        {
+            "src": "package.json",
+            "use": "@vercel/node",
+            "config": {
+                "buildCommand": "prisma generate"
+            }
         }
     ],
     "routes": [
@@ -11,6 +18,5 @@
             "src": "/(.*)",
             "dest": "app.py"
         }
-    ],
-    "buildCommand": "prisma generate"
+    ]
 }

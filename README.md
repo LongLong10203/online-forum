@@ -3,6 +3,7 @@ An simple online forum built by me with Python Flask
 
 # Technology used
 - Flask
+- Jinja
 - Prisma
 - SQLite
 
