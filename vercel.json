@@ -13,6 +13,6 @@
         }
     ],
     "scripts": {
-        "postinstall": "prisma generate"
+        "vercle-build": "prisma generate && prisma migrate deploy && next build"
     }
 }
