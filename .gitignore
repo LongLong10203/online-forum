@@ -1,3 +1,3 @@
-tests/
+tests/**
 vercel.json
 database.db
