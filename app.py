@@ -1,6 +1,5 @@
 from flask import Flask, request, redirect, url_for, render_template
 from prisma import Prisma
-import asyncio
 
 
 app = Flask(__name__)
@@ -72,7 +71,6 @@ async def home():
         return redirect(url_for("home"))
 
     posts = await get_all_posts()
-    # posts = [asyncio.run(q) for q in posts]
 
     return render_template("home.html", posts=posts)
 
