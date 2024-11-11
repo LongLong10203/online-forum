@@ -3,10 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "vercel-build": "prisma generate && npm run migrate:deploy",
+        "vercel-build": "prisma generate",
         "prisma:generate:dataproxy": "prisma generate",
-        "prisma:generate:library": "prisma generate",
-        "migrate:deploy": "prisma migrate deploy"
+        "prisma:generate:library": "prisma generate"
     },
     "dependencies": {
         "@prisma/client": "3.4.2"
