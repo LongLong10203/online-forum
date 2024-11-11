@@ -1,17 +1,15 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
-    "functions": {
-        "api/flask.py": {
-            "runtime": "python3.11",
-            "maxDuration": 10
+    "version": 2,
+    "builds": [
+        {
+            "src": "app.py",
+            "use": "@vercel/python"
         }
-    },
-    "buildCommand": "pip install -r requirements.txt",
-    "outputDirectory": "api",
+    ],
     "routes": [
         {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
+            "src": "/(.*)",
+            "dest": "app.py"
         }
     ]
 }
