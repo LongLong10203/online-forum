@@ -11,8 +11,5 @@
             "src": "/(.*)",
             "dest": "app.py"
         }
-    ],
-    "scripts": {
-        "vercle-build": "prisma generate && prisma migrate deploy && next build"
-    }
+    ]
 }
